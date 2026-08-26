@@ -8,8 +8,8 @@ import HistoryView from "./views/HistoryView";
 import AboutView from "./views/AboutView";
 import PrivacyModal from "./components/PrivacyModal";
 import GuideModal from "./components/GuideModal";
-import { CDN_PROVIDERS } from "./constants/providers";
-import { parseGithubUrl } from "./utils/helpers";
+import { getProviders } from "./constants/providers";
+import { parseUrl } from "./utils/helpers";
 import { useUrlState } from "./hooks/useUrlState";
 import { useLanguage } from "./hooks/useLanguage";
 
@@ -63,17 +63,13 @@ function App() {
         return;
       }
 
-      const data = parseGithubUrl(targetUrl);
+      const data = parseUrl(targetUrl);
       if (data) {
         setIsLoading(true);
-        const generated = CDN_PROVIDERS.map((provider) => ({
+        const providers = getProviders(data);
+        const generated = providers.map((provider) => ({
           ...provider,
-          resultUrl: provider.generate(
-            data.user,
-            data.repo,
-            data.branch,
-            data.path,
-          ),
+          resultUrl: provider.url,
         }));
         setResults(generated);
         setRepoData(data);
@@ -95,9 +91,7 @@ function App() {
         if (customUrl) setInputUrl(customUrl);
       } else {
         setIsLoading(false);
-        alert(
-          "URL GitHub tidak valid. Gunakan format: https://github.com/user/repo/blob/branch/file",
-        );
+        alert("URL tidak valid. Gunakan format GitHub, NPM, atau WordPress.");
       }
     },
     [inputUrl, history, setUrlParams, activeTab],

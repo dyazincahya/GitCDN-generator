@@ -36,9 +36,20 @@ export default function GuideModal({ isOpen, onClose }) {
               {t('guide.step2.title')}
             </h3>
             <p className="text-sm ml-7 mb-2">{t('guide.step2.desc')}</p>
-            <code className="block text-[11px] bg-gray-100 dark:bg-[#303134] p-3 rounded-lg border border-[#dfe1e5] dark:border-[#3c4043] break-all">
-              https://github.com/user/repo/blob/main/file.json
-            </code>
+            <div className="space-y-2 ml-7">
+              <div className="text-[10px] text-gray-400 uppercase font-bold">GitHub</div>
+              <code className="block text-[11px] bg-gray-100 dark:bg-[#303134] p-3 rounded-lg border border-[#dfe1e5] dark:border-[#3c4043] break-all">
+                https://github.com/user/repo/blob/main/file.json
+              </code>
+              <div className="text-[10px] text-gray-400 uppercase font-bold">NPM</div>
+              <code className="block text-[11px] bg-gray-100 dark:bg-[#303134] p-3 rounded-lg border border-[#dfe1e5] dark:border-[#3c4043] break-all">
+                https://www.npmjs.com/package/jquery
+              </code>
+              <div className="text-[10px] text-gray-400 uppercase font-bold">WordPress</div>
+              <code className="block text-[11px] bg-gray-100 dark:bg-[#303134] p-3 rounded-lg border border-[#dfe1e5] dark:border-[#3c4043] break-all">
+                https://wordpress.org/plugins/wp-slimstat/
+              </code>
+            </div>
           </div>
 
           <div>

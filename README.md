@@ -4,7 +4,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-**GitCDN Generator** is a simple tool to convert GitHub file URLs into CDN links (jsDelivr, Statically, and GitHub Raw) with a minimalist UI inspired by Google Search.
+GitCDN Generator is a simple tool to convert GitHub, NPM, and WordPress URLs into CDN links (jsDelivr, Statically, and GitHub Raw) with a minimalist UI inspired by Google Search.
 
 <p align="center">
   <img src="src/assets/icon-wide.png" alt="GitCDN Banner" width="600px">
@@ -12,15 +12,13 @@
 
 ## Features
 
-- **Multi-Provider Support**: Generate URLs for **jsDelivr**, **Statically**, and **GitHub Raw** in a single click.
-- **Minimalist UI**: Clean, distraction-free layout optimized for productivity.
-- **Bilingual Support**: Fully localized in **English** and **Indonesian**.
-- **History Management**: Keep track of your recently generated links (stored locally in your browser).
-- **Knowledge Panel**: Instantly see repository details, owner info, and CDN advantages.
-- **Smart Sharing**: Share your results directly to WhatsApp, Facebook, or X with captions.
-- **Privacy First**: Zero server-side storage. All your data remains in your browser's LocalStorage.
-- **Responsive Design**: Perfect experience across mobile, tablet, and desktop devices.
-- **Dark Mode**: Beautiful dark theme that follows your system preferences or manual toggle.
+- Multi-Source Support: GitHub, NPM packages, and WordPress (Plugins/Themes).
+- Multiple CDN Providers: jsDelivr, Statically, and GitHub Raw.
+- ESM Support: Automatic conversion to ES Modules via esm.run for NPM packages.
+- History & Favorites: Locally saved search history.
+- Multi-Language: Support for English and Indonesian.
+- Professional UI: Clean, responsive design with Dark Mode support.
+- Privacy First: No tracking, all processing is done client-side.
 
 ## Tech Stack
 
@@ -69,11 +67,11 @@
 You can also generate CDN links directly by passing the GitHub file URL as a query parameter:
 
 ```text
-https://gitcdn-generator.vercel.app/?q=GITHUB_FILE_URL
+https://gitcdn-generator.vercel.app?q=GITHUB_FILE_URL
 ```
 
 Example:
-[https://gitcdn-generator.vercel.app/?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json](https://gitcdn-generator.vercel.app/?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json)
+[https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json](https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json)
 
 ## Privacy Policy
 

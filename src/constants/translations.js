@@ -24,28 +24,25 @@ export const translations = {
       copyLink: "Salin Tautan",
     },
     landing: {
-      title: "Generate URL CDN untuk file GitHub Anda",
-      placeholder: "Masukkan URL file GitHub...",
+      title: "Generate URL CDN untuk aset Anda",
+      placeholder: "Masukkan URL GitHub, NPM, atau WordPress...",
     },
     results: {
-      stats: "Menghasilkan 3 URL CDN dalam sekejap",
+      stats: "Menghasilkan URL CDN dalam sekejap",
       limit: "Limit",
       directLink: "Gunakan link langsung untuk file Anda.",
       verify: "Buka link di tab baru untuk verifikasi.",
-      jsdelivr_desc:
-        "Layanan CDN gratis untuk proyek open source di GitHub. Sangat cepat dengan jaringan edge global yang luas.",
-      statically_desc:
-        "CDN yang dioptimalkan untuk pengembang, menawarkan optimasi gambar otomatis dan limit file yang lebih besar.",
-      github_desc:
-        "Akses langsung ke file mentah GitHub. Paling up-to-date tetapi bukan merupakan CDN murni dengan edge caching.",
     },
     knowledge: {
-      title: "Repository Info",
-      type: "GitHub Repository",
+      title: "Informasi Aset",
+      type: "Tipe Aset",
       owner: "Pemilik",
       repo: "Repositori",
       branch: "Branch",
       file: "File",
+      package: "Paket",
+      version: "Versi",
+      project: "Proyek",
       on: "pada",
       prosTitle: "Keunggulan CDN",
       pros: {
@@ -58,8 +55,8 @@ export const translations = {
     guide: {
       title: "Panduan Penggunaan",
       step1: {
-        title: "Cari File di GitHub",
-        desc: "Buka repositori GitHub Anda dan pilih file (JSON, JS, CSS, Gambar, dll) yang ingin Anda jadikan CDN.",
+        title: "Cari Aset Anda",
+        desc: "Buka file di GitHub, paket di NPM, atau plugin/tema di WordPress.org.",
       },
       step2: {
         title: "Salin URL Browser",
@@ -67,7 +64,7 @@ export const translations = {
       },
       step3: {
         title: "Tempel & Generate",
-        desc: "Tempelkan URL tersebut ke kotak pencarian GitCDN dan tekan Enter. Kami akan memberikan 3 pilihan URL CDN instan!",
+        desc: "Tempelkan URL tersebut ke kotak pencarian GitCDN dan tekan Enter. Kami akan memberikan pilihan URL CDN instan!",
       },
     },
     privacy: {
@@ -125,28 +122,25 @@ export const translations = {
       copyLink: "Copy Link",
     },
     landing: {
-      title: "Generate CDN URLs for your GitHub files",
-      placeholder: "Enter GitHub file URL...",
+      title: "Generate CDN URLs for your assets",
+      placeholder: "Enter GitHub, NPM, or WordPress URL...",
     },
     results: {
-      stats: "Generated 3 CDN URLs instantly",
+      stats: "Generated CDN URLs instantly",
       limit: "Limit",
       directLink: "Get a direct link for your file.",
       verify: "Open link in a new tab for verification.",
-      jsdelivr_desc:
-        "Free CDN service for open source projects on GitHub. Fast with a wide global edge network.",
-      statically_desc:
-        "Developer-optimized CDN, offering automatic image optimization and larger file limits.",
-      github_desc:
-        "Direct access to raw GitHub files. Most up-to-date but not a pure CDN with edge caching.",
     },
     knowledge: {
-      title: "Repository Info",
-      type: "GitHub Repository",
+      title: "Asset Info",
+      type: "Asset Type",
       owner: "Owner",
       repo: "Repository",
       branch: "Branch",
       file: "File",
+      package: "Package",
+      version: "Version",
+      project: "Project",
       on: "on",
       prosTitle: "CDN Advantages",
       pros: {
@@ -159,16 +153,16 @@ export const translations = {
     guide: {
       title: "Usage Guide",
       step1: {
-        title: "Find File on GitHub",
-        desc: "Open your GitHub repository and select the file (JSON, JS, CSS, Image, etc.) you want to serve via CDN.",
+        title: "Find Your Asset",
+        desc: "Open a file on GitHub, a package on NPM, or a plugin/theme on WordPress.org.",
       },
       step2: {
         title: "Copy Browser URL",
-        desc: "Copy the URL from your browser's address bar. Example of supported format:",
+        desc: "Copy the URL from your browser's address bar. Example of supported formats:",
       },
       step3: {
         title: "Paste & Generate",
-        desc: "Paste the URL into the GitCDN search box and press Enter. We'll provide 3 instant CDN options!",
+        desc: "Paste the URL into the GitCDN search box and press Enter. We'll provide instant CDN options!",
       },
     },
     privacy: {
