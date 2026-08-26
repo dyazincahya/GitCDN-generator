@@ -28,11 +28,15 @@ export default function ResultItem({
         </div>
       </div>
 
-      <h3
-        className="text-xl text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer mb-1 leading-tight font-medium"
-        onClick={() => window.open(item.resultUrl, "_blank")}
-      >
-        {item.name} CDN
+      <h3 className="mb-1 leading-tight font-medium">
+        <a
+          href={item.resultUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xl text-[#1a0dab] dark:text-[#8ab4f8] hover:underline"
+        >
+          {item.name} CDN
+        </a>
       </h3>
 
       <p className="text-sm text-[#4d5156] dark:text-[#bdc1c6] mb-3 leading-normal flex items-center flex-wrap gap-2">
@@ -45,7 +49,8 @@ export default function ResultItem({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-4 ml-2">
         <div className="flex flex-col gap-1">
           <button
-            className="flex items-center gap-2 text-[#1a0dab] dark:text-[#8ab4f8] hover:underline text-sm font-medium"
+            type="button"
+            className="flex items-center gap-2 text-[#1a0dab] dark:text-[#8ab4f8] hover:underline text-sm font-medium cursor-pointer"
             onClick={() => copyToClipboard(item.resultUrl, item.id)}
           >
             {copiedId === item.id ? (
@@ -60,12 +65,14 @@ export default function ResultItem({
           </p>
         </div>
         <div className="flex flex-col gap-1">
-          <button
-            className="flex items-center gap-2 text-[#1a0dab] dark:text-[#8ab4f8] hover:underline text-sm font-medium"
-            onClick={() => window.open(item.resultUrl, "_blank")}
+          <a
+            href={item.resultUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[#1a0dab] dark:text-[#8ab4f8] hover:underline text-sm font-medium cursor-pointer w-fit"
           >
             <Play className="w-4 h-4 fill-current" /> {t("common.test")}
-          </button>
+          </a>
         </div>
       </div>
     </div>
