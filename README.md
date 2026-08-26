@@ -71,7 +71,7 @@ https://gitcdn-generator.vercel.app?q=GITHUB_FILE_URL
 ```
 
 Example:
-[https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json](https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json)
+[https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/KBBI-SQL-database/blob/main/antonim/dictionary_antonim\_\_JSON.json](https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/KBBI-SQL-database/blob/main/antonim/dictionary_antonim__JSON.json)
 
 ## Privacy Policy
 
