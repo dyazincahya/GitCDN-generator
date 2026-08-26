@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
   Github,
+  Gitlab,
   Zap,
   Shield,
   Globe,
@@ -35,6 +36,24 @@ export default function KnowledgePanel({ repoData }) {
   if (repoData.type === "github") {
     author = repoData.user;
     projectName = repoData.repo;
+  } else if (repoData.type === "gitlab") {
+    author = repoData.user;
+    projectName = repoData.repo;
+    icon = <Gitlab className="w-8 h-8 text-[#fc6d26]" />;
+    typeLabel = "GitLab Repository";
+    typeIcon = <Gitlab className="w-4 h-4" />;
+  } else if (repoData.type === "bitbucket") {
+    author = repoData.user;
+    projectName = repoData.repo;
+    icon = <Globe className="w-8 h-8 text-[#0052cc]" />;
+    typeLabel = "Bitbucket Repository";
+    typeIcon = <Globe className="w-4 h-4" />;
+  } else if (repoData.type === "gist") {
+    author = repoData.user;
+    projectName = "GitHub Gist";
+    icon = <Layers className="w-8 h-8 text-gray-700" />;
+    typeLabel = "GitHub Gist";
+    typeIcon = <Layers className="w-4 h-4" />;
   } else if (repoData.type === "npm") {
     author = "NPM Registry";
     projectName = repoData.packageName;
@@ -108,12 +127,21 @@ export default function KnowledgePanel({ repoData }) {
           </div>
 
           <div className="text-sm text-[#4d5156] dark:text-[#bdc1c6] mb-6 leading-relaxed">
-            {repoData.type === "github" ? (
+            {["github", "gitlab", "bitbucket"].includes(repoData.type) ? (
               <>
                 {t("knowledge.owner")} <b>{repoData.user}</b>{" "}
                 {t("knowledge.on")} branch <b>{repoData.branch}</b>.
+                <br />
                 {t("knowledge.file")}:{" "}
                 <code>{repoData.path.split("/").pop() || "index"}</code>.
+              </>
+            ) : repoData.type === "gist" ? (
+              <>
+                {t("knowledge.owner")} <b>{repoData.user}</b>.
+                <br />
+                {t("knowledge.file")}:{" "}
+                <code>{repoData.path.split("/").pop() || repoData.gistId}</code>
+                .
               </>
             ) : repoData.type === "npm" ? (
               <>
@@ -131,14 +159,20 @@ export default function KnowledgePanel({ repoData }) {
           <hr className="border-[#dfe1e5] dark:border-[#3c4043] mb-6" />
 
           <div className="space-y-4">
-            {repoData.type === "github" && (
+            {["github", "gitlab", "bitbucket"].includes(repoData.type) && (
               <>
                 <div className="flex text-sm">
                   <span className="w-24 font-bold text-[#202124] dark:text-[#e8eaed] shrink-0">
                     {t("knowledge.owner")}
                   </span>
                   <a
-                    href={`https://github.com/${repoData.user}`}
+                    href={
+                      repoData.type === "github"
+                        ? `https://github.com/${repoData.user}`
+                        : repoData.type === "gitlab"
+                          ? `https://gitlab.com/${repoData.user}`
+                          : `https://bitbucket.org/${repoData.user}`
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer"
@@ -151,7 +185,13 @@ export default function KnowledgePanel({ repoData }) {
                     {t("knowledge.repo")}
                   </span>
                   <a
-                    href={`https://github.com/${repoData.user}/${repoData.repo}`}
+                    href={
+                      repoData.type === "github"
+                        ? `https://github.com/${repoData.user}/${repoData.repo}`
+                        : repoData.type === "gitlab"
+                          ? `https://gitlab.com/${repoData.user}/${repoData.repo}`
+                          : `https://bitbucket.org/${repoData.user}/${repoData.repo}`
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer"
@@ -160,6 +200,21 @@ export default function KnowledgePanel({ repoData }) {
                   </a>
                 </div>
               </>
+            )}
+            {repoData.type === "gist" && (
+              <div className="flex text-sm">
+                <span className="w-24 font-bold text-[#202124] dark:text-[#e8eaed] shrink-0">
+                  Gist
+                </span>
+                <a
+                  href={`https://gist.github.com/${repoData.user}/${repoData.gistId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer"
+                >
+                  {repoData.gistId}
+                </a>
+              </div>
             )}
             {repoData.type === "npm" && (
               <>

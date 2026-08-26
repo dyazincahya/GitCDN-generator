@@ -1,5 +1,5 @@
 import React from "react";
-import { Clock, X, Github } from "lucide-react";
+import { Clock, X, Link as LinkIcon } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
 
 export default function HistoryView({
@@ -46,7 +46,7 @@ export default function HistoryView({
                 onClick={() => onSelect(url)}
                 className="flex-1 text-left truncate text-sm text-[#1a0dab] dark:text-[#8ab4f8] hover:underline pr-4 flex items-center gap-3"
               >
-                <Github className="w-4 h-4 text-gray-400 shrink-0" />
+                <LinkIcon className="w-4 h-4 text-gray-400 shrink-0" />
                 <span className="truncate">{url}</span>
               </button>
               <button

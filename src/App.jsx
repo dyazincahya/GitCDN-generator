@@ -8,6 +8,7 @@ import HistoryView from "./views/HistoryView";
 import AboutView from "./views/AboutView";
 import PrivacyModal from "./components/PrivacyModal";
 import GuideModal from "./components/GuideModal";
+import AlertModal from "./components/AlertModal";
 import { getProviders } from "./constants/providers";
 import { parseUrl } from "./utils/helpers";
 import { useUrlState } from "./hooks/useUrlState";
@@ -31,6 +32,8 @@ function App() {
   const [history, setHistory] = useState([]);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [showGuide, setShowGuide] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
 
   // Initialize theme and history
   useEffect(() => {
@@ -91,10 +94,11 @@ function App() {
         if (customUrl) setInputUrl(customUrl);
       } else {
         setIsLoading(false);
-        alert("URL tidak valid. Gunakan format GitHub, NPM, atau WordPress.");
+        setAlertMessage(t("common.invalidUrl"));
+        setShowAlert(true);
       }
     },
-    [inputUrl, history, setUrlParams, activeTab],
+    [inputUrl, history, setUrlParams, activeTab, t],
   );
 
   // Handle initial search from URL
@@ -240,6 +244,12 @@ function App() {
       />
 
       <GuideModal isOpen={showGuide} onClose={() => setShowGuide(false)} />
+
+      <AlertModal
+        isOpen={showAlert}
+        onClose={() => setShowAlert(false)}
+        message={alertMessage}
+      />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, Clock, Github, HelpCircle } from "lucide-react";
+import { Search, Clock, HelpCircle, Link as LinkIcon } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
 
 export default function LandingView({ 
@@ -78,7 +78,7 @@ export default function LandingView({
                   onClick={(e) => handleGenerate(e, url)} 
                   className="w-full text-left px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-[#303134] rounded-lg transition-colors truncate flex items-center gap-3"
                 >
-                  <Github className="w-4 h-4 opacity-50 shrink-0" />
+                  <LinkIcon className="w-4 h-4 opacity-50 shrink-0" />
                   <span className="truncate">{url}</span>
                 </button>
               ))}

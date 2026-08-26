@@ -4,7 +4,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-GitCDN Generator is a simple tool to convert GitHub, NPM, and WordPress URLs into CDN links (jsDelivr, Statically, and GitHub Raw) with a minimalist UI inspired by Google Search.
+GitCDN Generator is a tool to convert GitHub, GitLab, Bitbucket, GitHub Gist, NPM, and WordPress URLs into CDN links (jsDelivr, Statically, and GitHub Raw) with a minimalist UI.
 
 <p align="center">
   <img src="src/assets/icon-wide.png" alt="GitCDN Banner" width="600px">
@@ -12,28 +12,28 @@ GitCDN Generator is a simple tool to convert GitHub, NPM, and WordPress URLs int
 
 ## Features
 
-- Multi-Source Support: GitHub, NPM packages, and WordPress (Plugins/Themes).
-- Multiple CDN Providers: jsDelivr, Statically, and GitHub Raw.
+- Multi-Source Support: GitHub, GitLab, Bitbucket, GitHub Gist, NPM packages, and WordPress (Plugins/Themes).
+- Multiple CDN Providers: jsDelivr, Statically, unpkg, and GitHub Raw.
 - ESM Support: Automatic conversion to ES Modules via esm.run for NPM packages.
-- History & Favorites: Locally saved search history.
+- History Management: Locally saved search history in the browser.
 - Multi-Language: Support for English and Indonesian.
 - Professional UI: Clean, responsive design with Dark Mode support.
-- Privacy First: No tracking, all processing is done client-side.
+- Privacy Focus: No tracking, all processing is done client-side.
 
 ## Tech Stack
 
-- **Framework**: [React](https://reactjs.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Utilities**: `clsx`, `tailwind-merge`
+- Framework: React
+- Styling: Tailwind CSS
+- Icons: Lucide React
+- Build Tool: Vite
+- Utilities: clsx, tailwind-merge
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- Node.js (v18 or higher)
+- npm or yarn
 
 ### Installation
 
@@ -53,38 +53,41 @@ GitCDN Generator is a simple tool to convert GitHub, NPM, and WordPress URLs int
    ```bash
    npm run dev
    ```
-   The app will be available at `http://localhost:9595`.
+   The app will be available at http://localhost:9595.
 
 ## Usage Guide
 
-1. **Find your file**: Open any GitHub repository and select a file (JSON, JS, CSS, Image, etc.).
-2. **Copy URL**: Copy the browser URL (e.g., `https://github.com/user/repo/blob/main/data.json`).
+1. **Find your source**: Open a file on GitHub, GitLab, Bitbucket, or a Gist.
+2. **Copy URL**: Copy the browser URL (e.g., https://github.com/user/repo/blob/main/file.json).
 3. **Paste & Generate**: Paste it into the GitCDN search bar and hit Enter.
-4. **Copy/Test**: Use the Copy button for your preferred CDN or the Play icon to test the link instantly.
+4. **Copy/Test**: Use the Copy button for your preferred CDN or the Play icon to test the link.
 
 ## Direct Link Usage
 
-You can also generate CDN links directly by passing the GitHub file URL as a query parameter:
+Generate CDN links directly by passing the source URL as a query parameter:
 
 ```text
-https://gitcdn-generator.vercel.app?q=GITHUB_FILE_URL
+https://gitcdn-generator.vercel.app?q=SOURCE_URL
 ```
 
 Example:
-[https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/KBBI-SQL-database/blob/main/antonim/dictionary_antonim\_\_JSON.json](https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/KBBI-SQL-database/blob/main/antonim/dictionary_antonim__JSON.json)
+
+1. [https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json](https://gitcdn-generator.vercel.app?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json)
+
+2. [https://gitcdn-generator.vercel.app?q=https://www.npmjs.com/package/jquery](https://gitcdn-generator.vercel.app?q=https://www.npmjs.com/package/jquery)
 
 ## Privacy Policy
 
-We value your privacy. GitCDN Generator is a **client-side only** application.
+GitCDN Generator is a client-side only application.
 
-- **No Data Collection**: We do not collect, store, or share any of your personal data.
-- **Local Storage**: Your history and theme preferences are stored exclusively in your browser's `LocalStorage`.
+- **No Data Collection**: No personal data is collected, stored, or shared.
+- **Local Storage**: History and theme preferences are stored exclusively in your browser's LocalStorage.
 - **No Tracking**: No third-party analytics or tracking cookies are used.
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is open-source and available under the MIT License.
 
 ---
 
-Developed with ❤️ by **Kang Cahya**
+Developed by **Kang Cahya**

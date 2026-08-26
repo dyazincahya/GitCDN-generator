@@ -22,10 +22,14 @@ export const translations = {
       shareSuccess: "Tautan berhasil disalin!",
       shareTitle: "Hasil Generate GitCDN",
       copyLink: "Salin Tautan",
+      invalidUrl:
+        "URL tidak valid. Gunakan format GitHub, GitLab, Bitbucket, NPM, atau WordPress.",
+      error: "Kesalahan",
     },
     landing: {
       title: "Generate URL CDN untuk aset Anda",
-      placeholder: "Masukkan URL GitHub, NPM, atau WordPress...",
+      placeholder:
+        "Masukkan URL GitHub, GitLab, Bitbucket, NPM, atau WordPress...",
     },
     results: {
       stats: "Menghasilkan URL CDN dalam sekejap",
@@ -56,7 +60,7 @@ export const translations = {
       title: "Panduan Penggunaan",
       step1: {
         title: "Cari Aset Anda",
-        desc: "Buka file di GitHub, paket di NPM, atau plugin/tema di WordPress.org.",
+        desc: "Buka file di GitHub, GitLab, Bitbucket, Gist, paket di NPM, atau plugin/tema di WordPress.org.",
       },
       step2: {
         title: "Salin URL Browser",
@@ -65,6 +69,15 @@ export const translations = {
       step3: {
         title: "Tempel & Generate",
         desc: "Tempelkan URL tersebut ke kotak pencarian GitCDN dan tekan Enter. Kami akan memberikan pilihan URL CDN instan!",
+      },
+      comparison: {
+        title: "Perbandingan Provider",
+        colProvider: "Provider",
+        colSource: "Sumber",
+        colLimit: "Limit",
+        colImage: "Img Opt",
+        yes: "Ya",
+        no: "Tidak",
       },
     },
     privacy: {
@@ -85,12 +98,12 @@ export const translations = {
     about: {
       title: "About GitCDN",
       desc1:
-        "GitCDN adalah alat untuk menghasilkan URL CDN dari aset di GitHub secara instan.",
+        "GitCDN adalah alat untuk menghasilkan URL CDN dari berbagai sumber repositori git secara instan.",
       desc2:
         "Membantu developer mendapatkan link file (JSON, JS, CSS, Gambar) untuk kebutuhan production maupun development.",
       whyTitle: "Kenapa menggunakan GitCDN?",
       feature1:
-        "Mendukung Banyak Provider: jsDelivr, Statically, & GitHub Raw dalam satu kali klik.",
+        "Mendukung Banyak Provider: jsDelivr, Statically, unpkg, & GitHub Raw dalam satu kali klik.",
       feature2:
         "Keamanan & Kecepatan: Menggunakan infrastruktur CDN global untuk pengiriman aset.",
       feature3:
@@ -117,13 +130,16 @@ export const translations = {
       recentGenerated: "Recent Generated",
       viewMore: "View More",
       share: "Share",
-      shareSuccess: "Link copied to clipboard!",
-      shareTitle: "GitCDN Generation Results",
+      shareSuccess: "Link copied successfully!",
+      shareTitle: "GitCDN Generated Result",
       copyLink: "Copy Link",
+      invalidUrl:
+        "Invalid URL. Use GitHub, GitLab, Bitbucket, NPM, or WordPress format.",
+      error: "Error",
     },
     landing: {
       title: "Generate CDN URLs for your assets",
-      placeholder: "Enter GitHub, NPM, or WordPress URL...",
+      placeholder: "Enter GitHub, GitLab, Bitbucket, NPM, or WordPress URL...",
     },
     results: {
       stats: "Generated CDN URLs instantly",
@@ -154,7 +170,7 @@ export const translations = {
       title: "Usage Guide",
       step1: {
         title: "Find Your Asset",
-        desc: "Open a file on GitHub, a package on NPM, or a plugin/theme on WordPress.org.",
+        desc: "Open a file on GitHub, GitLab, Bitbucket, Gist, a package on NPM, or a plugin/theme on WordPress.org.",
       },
       step2: {
         title: "Copy Browser URL",
@@ -163,6 +179,15 @@ export const translations = {
       step3: {
         title: "Paste & Generate",
         desc: "Paste the URL into the GitCDN search box and press Enter. We'll provide instant CDN options!",
+      },
+      comparison: {
+        title: "Provider Comparison",
+        colProvider: "Provider",
+        colSource: "Source",
+        colLimit: "Limit",
+        colImage: "Img Opt",
+        yes: "Yes",
+        no: "No",
       },
     },
     privacy: {
@@ -183,12 +208,12 @@ export const translations = {
     about: {
       title: "About GitCDN",
       desc1:
-        "GitCDN is a tool to instantly generate CDN URLs from GitHub assets.",
+        "GitCDN is a tool to instantly generate CDN URLs from various git repository sources.",
       desc2:
         "Helping developers get file links (JSON, JS, CSS, Images) for production or development needs.",
       whyTitle: "Why use GitCDN?",
       feature1:
-        "Multi-Provider Support: jsDelivr, Statically, & GitHub Raw in one click.",
+        "Multi-Provider Support: jsDelivr, Statically, unpkg, & GitHub Raw in one click.",
       feature2:
         "Security & Speed: Uses global CDN infrastructure for fast asset delivery.",
       feature3:
