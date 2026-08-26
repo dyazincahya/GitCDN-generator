@@ -64,6 +64,17 @@
 3. **Paste & Generate**: Paste it into the GitCDN search bar and hit Enter.
 4. **Copy/Test**: Use the Copy button for your preferred CDN or the Play icon to test the link instantly.
 
+## Direct Link Usage
+
+You can also generate CDN links directly by passing the GitHub file URL as a query parameter:
+
+```text
+https://gitcdn-generator.vercel.app/?q=GITHUB_FILE_URL
+```
+
+Example:
+[https://gitcdn-generator.vercel.app/?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json](https://gitcdn-generator.vercel.app/?q=https://github.com/dyazincahya/iqro-json/blob/main/hijaiyah-letters.json)
+
 ## Privacy Policy
 
 We value your privacy. GitCDN Generator is a **client-side only** application.
