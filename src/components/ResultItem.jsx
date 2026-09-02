@@ -1,4 +1,3 @@
-import React from "react";
 import { ChevronRight, Copy, Check, Play } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
 
@@ -9,6 +8,8 @@ export default function ResultItem({
   copyToClipboard,
 }) {
   const { t } = useLanguage();
+  const fileName = repoData.path?.split("/").filter(Boolean).pop();
+  const resultTitle = fileName || item.name;
 
   return (
     <div className="group max-w-[652px]">
@@ -33,9 +34,10 @@ export default function ResultItem({
           href={item.resultUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xl text-[#1a0dab] dark:text-[#8ab4f8] hover:underline"
+          title={resultTitle}
+          className="block text-xl text-[#1a0dab] dark:text-[#8ab4f8] hover:underline line-clamp-2 break-all"
         >
-          {item.name} CDN
+          {resultTitle}
         </a>
       </h3>
 
