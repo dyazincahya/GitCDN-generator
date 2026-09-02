@@ -1,5 +1,14 @@
 import React from "react";
-import { Sun, Moon, Search, X, Clock, Info, Home } from "lucide-react";
+import {
+  Sun,
+  Moon,
+  Search,
+  X,
+  Clock,
+  Info,
+  Home,
+  BookOpen,
+} from "lucide-react";
 import { cn } from "../utils/helpers";
 import { useLanguage } from "../hooks/useLanguage";
 
@@ -86,6 +95,18 @@ export default function Header({
               {t("common.home")}
             </button>
             <button
+              type="button"
+              onClick={() => setActiveTab("docs")}
+              className={cn(
+                "text-sm font-medium transition-colors",
+                activeTab === "docs"
+                  ? "text-blue-600 dark:text-blue-400"
+                  : "hover:text-blue-600 dark:hover:text-blue-400",
+              )}
+            >
+              {t("common.docs")}
+            </button>
+            <button
               onClick={() => setActiveTab("about")}
               className={cn(
                 "text-sm font-medium transition-colors",
@@ -120,6 +141,17 @@ export default function Header({
               title="Home"
             >
               <Home className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("docs")}
+              className={cn(
+                "p-2 rounded-full hover:bg-gray-100 dark:hover:bg-[#303134] transition-colors",
+                activeTab === "docs" && "text-blue-600 dark:text-blue-400",
+              )}
+              title={t("common.docs")}
+            >
+              <BookOpen className="w-5 h-5" />
             </button>
             <button
               onClick={toggleTheme}

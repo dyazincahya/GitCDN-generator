@@ -4,6 +4,7 @@ export const translations = {
       about: "Tentang",
       privacy: "Kebijakan Privasi",
       home: "Beranda",
+      docs: "Dokumentasi",
       history: "Riwayat",
       guide: "Cara Penggunaan",
       all: "Semua",
@@ -80,6 +81,64 @@ export const translations = {
         no: "Tidak",
       },
     },
+    docs: {
+      eyebrow: "Dokumentasi Developer",
+      title: "Hubungkan data JSON ke GitCDN Generator",
+      intro:
+        "Tambahkan tombol API pada setiap data JSON di aplikasi Anda agar developer dapat membuka file sumber dan memilih URL CDN yang paling sesuai tanpa menyalin URL secara manual.",
+      copyCode: "Salin kode",
+      generator: {
+        inputLabel: "URL file JSON GitHub",
+        placeholder:
+          "https://github.com/owner/repository/blob/main/data/file.json",
+        required: "URL file GitHub wajib diisi.",
+        invalid:
+          "Masukkan URL file JSON GitHub yang valid dengan format /blob/ dan ekstensi .json.",
+        outputEmpty: "URL GitCDN akan muncul setelah input valid.",
+        codeEmpty:
+          "Masukkan URL file JSON GitHub yang valid untuk menghasilkan kode.",
+      },
+      steps: {
+        source: {
+          title: "Siapkan file publik",
+          desc: "Pastikan file JSON tersedia di repositori publik dan dapat dibuka melalui halaman file GitHub.",
+        },
+        url: {
+          title: "Bentuk URL GitCDN",
+          desc: "Masukkan URL halaman file GitHub ke parameter q dan encode nilainya agar URL tetap valid.",
+        },
+        button: {
+          title: "Tambahkan tombol API",
+          desc: "Tampilkan tombol pada setiap kartu atau baris data dan buka GitCDN Generator di tab baru.",
+        },
+      },
+      example: {
+        title: "Contoh: data kamus antonim KBBI",
+        desc: "Berikut perubahan URL file GitHub menjadi tautan yang langsung membuka hasil di GitCDN Generator.",
+        githubLabel: "URL file GitHub",
+        generatorLabel: "URL GitCDN Generator",
+      },
+      pattern: {
+        title: "Pola URL",
+        desc: "Gunakan pola berikut untuk membentuk tautan secara dinamis dari setiap URL file JSON.",
+        noteTitle: "Penting:",
+        note: "Gunakan URL halaman file GitHub dengan format /blob/, bukan URL raw. Selalu gunakan encodeURIComponent agar karakter khusus pada URL sumber tidak merusak query.",
+      },
+      implementation: {
+        title: "Contoh implementasi",
+        desc: "Pilih contoh sesuai teknologi aplikasi Anda. Pada daftar data, render tombol ini untuk setiap item dengan githubUrl yang berbeda.",
+      },
+      checklist: {
+        title: "Checklist sebelum dipublikasikan",
+        public: "Repositori dan file JSON dapat diakses secara publik.",
+        github:
+          "Tautan sumber mengarah langsung ke halaman file GitHub, bukan halaman folder.",
+        encode: "Nilai parameter q diproses dengan encodeURIComponent.",
+        everyItem:
+          "Setiap data JSON pada UI memiliki tombol API dengan URL sumbernya sendiri.",
+        newTab: 'Tautan dibuka di tab baru dengan rel="noopener noreferrer".',
+      },
+    },
     privacy: {
       title: "Kebijakan Privasi",
       storage: {
@@ -115,6 +174,7 @@ export const translations = {
       about: "About",
       privacy: "Privacy Policy",
       home: "Home",
+      docs: "Documentation",
       history: "History",
       guide: "Usage Guide",
       all: "All",
@@ -188,6 +248,63 @@ export const translations = {
         colImage: "Img Opt",
         yes: "Yes",
         no: "No",
+      },
+    },
+    docs: {
+      eyebrow: "Developer Documentation",
+      title: "Connect your JSON data to GitCDN Generator",
+      intro:
+        "Add an API button to every JSON item in your application so developers can open the source file and choose the most suitable CDN URL without copying URLs manually.",
+      copyCode: "Copy code",
+      generator: {
+        inputLabel: "GitHub JSON file URL",
+        placeholder:
+          "https://github.com/owner/repository/blob/main/data/file.json",
+        required: "A GitHub file URL is required.",
+        invalid:
+          "Enter a valid GitHub JSON file URL using the /blob/ format and a .json extension.",
+        outputEmpty: "The GitCDN URL will appear after the input is valid.",
+        codeEmpty: "Enter a valid GitHub JSON file URL to generate code.",
+      },
+      steps: {
+        source: {
+          title: "Prepare a public file",
+          desc: "Make sure the JSON file is in a public repository and can be opened from its GitHub file page.",
+        },
+        url: {
+          title: "Build the GitCDN URL",
+          desc: "Pass the GitHub file page URL to the q parameter and encode its value to keep the URL valid.",
+        },
+        button: {
+          title: "Add an API button",
+          desc: "Show the button on every data card or row and open GitCDN Generator in a new tab.",
+        },
+      },
+      example: {
+        title: "Example: KBBI antonym dictionary data",
+        desc: "This example turns a GitHub file URL into a link that opens its results directly in GitCDN Generator.",
+        githubLabel: "GitHub file URL",
+        generatorLabel: "GitCDN Generator URL",
+      },
+      pattern: {
+        title: "URL pattern",
+        desc: "Use this pattern to dynamically create a link from each JSON file URL.",
+        noteTitle: "Important:",
+        note: "Use the GitHub file page URL containing /blob/, not a raw URL. Always use encodeURIComponent so special characters in the source URL do not break the query.",
+      },
+      implementation: {
+        title: "Implementation examples",
+        desc: "Choose the example for your application stack. In a data list, render this button for every item with a different githubUrl.",
+      },
+      checklist: {
+        title: "Pre-publish checklist",
+        public: "The repository and JSON file are publicly accessible.",
+        github:
+          "The source link points directly to a GitHub file page, not a folder.",
+        encode: "The q parameter value is processed with encodeURIComponent.",
+        everyItem:
+          "Every JSON item in the UI has an API button with its own source URL.",
+        newTab: 'The link opens in a new tab with rel="noopener noreferrer".',
       },
     },
     privacy: {

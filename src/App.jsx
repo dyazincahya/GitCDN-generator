@@ -6,6 +6,7 @@ import ResultItem from "./components/ResultItem";
 import KnowledgePanel from "./components/KnowledgePanel";
 import HistoryView from "./views/HistoryView";
 import AboutView from "./views/AboutView";
+import DeveloperDocsView from "./views/DeveloperDocsView";
 import PrivacyModal from "./components/PrivacyModal";
 import GuideModal from "./components/GuideModal";
 import AlertModal from "./components/AlertModal";
@@ -187,6 +188,8 @@ function App() {
         );
       case "about":
         return <AboutView />;
+      case "docs":
+        return <DeveloperDocsView />;
       case "all":
       default:
         return (
